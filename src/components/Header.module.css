@@ -1,0 +1,15 @@
+.header {
+  font-size: 30px;
+  color: rgb(182, 121, 160);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 57px;
+}

@@ -1,0 +1,66 @@
+.accordion {
+  width: 700px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 500px;
+}
+
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  /* border-radius: 5px; */
+}
+
+.open {
+  border-top: 5px solid rgb(104, 97, 36);
+}
+
+.open .hiddenBox {
+  display: block;
+}
+
+.open .number,
+.open .text {
+  color: rgb(104, 97, 36);
+}
+
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.number {
+  color: rgb(204, 204, 204);
+}
+
+.hiddenBox {
+  grid-column: 2;
+  display: none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(104, 97, 36);
+}
+/* 1. Who We Are?
+We are a company dedicated to making knowledge accessible to everyone, anywhere.
+Founded with a passion for reading and technology, our online library offers a vast collection of eBooks, audiobooks, and research materials across various genres and languages. Our mission is to empower readers and learners by providing a seamless, user-friendly platform to explore, learn, and grow.
+
+2. What Do We Offer?
+An extensive digital library and personalized reading experience.
+From timeless classics to the latest bestsellers, our collection spans fiction, non-fiction, academic resources, and more. Users can enjoy customizable reading settings, offline access, and curated recommendations tailored to their interests. We also provide tools for note-taking, highlighting, and syncing progress across devices, ensuring a smooth and engaging reading experience.
+
+3. Why Choose Us?
+Unmatched convenience, variety, and a commitment to learning.
+We believe that reading should be a rewarding and flexible experience. With affordable subscription plans, ad-free browsing, and a growing library, we make sure there’s something for every reader. Our customer support is always ready to assist, and we continuously update our collection based on user feedback and trends. Choose us for a library that fits right in your pocket!
+
+ */

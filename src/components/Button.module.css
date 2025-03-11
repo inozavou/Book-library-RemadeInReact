@@ -1,0 +1,19 @@
+.btn {
+  border: inherit;
+  color: inherit;
+  background-color: inherit;
+  border-radius: 0px 5px 0px 5px;
+  width: 50px;
+  height: 25px;
+}
+
+.primary {
+  color: rgb(224, 219, 223);
+  background-color: rgb(81, 109, 81);
+}
+
+.back {
+  color: rgb(74, 90, 74);
+  border: 2px solid rgb(81, 95, 80);
+  background-color: none;
+}

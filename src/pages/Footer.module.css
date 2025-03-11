@@ -1,0 +1,63 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(25, 43, 38);
+  color: rgb(182, 121, 160);
+  padding: 20px 0;
+  justify-content: center;
+  /* border-radius: 10px; */
+  gap: 100px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.logoSection {
+  max-width: 300px;
+}
+
+.logoIcon {
+  width: 57px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: rgb(182, 121, 160);
+}
+
+.linksSection {
+  max-width: 200px;
+}
+
+.heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+}
+
+.linksList li {
+  margin-bottom: 5px;
+}
+
+.linksList li a {
+  text-decoration: none;
+  color: rgb(182, 121, 160);
+  transition: color 0.3s;
+}
+
+.linksList li a:hover {
+  color: rgb(238, 33, 163);
+}

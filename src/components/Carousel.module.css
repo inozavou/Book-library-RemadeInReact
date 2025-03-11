@@ -1,0 +1,105 @@
+.booksContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.genre {
+  display: flex;
+  /* background-color: rgb(210, 219, 200); */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 10px; */
+  height: 500px;
+  padding: 30px;
+  position: relative;
+  margin-bottom: 80px;
+  gap: 10px;
+  background-image: linear-gradient(
+      rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.8)
+    ),
+    url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.genreTitle {
+  font-size: 30px;
+}
+
+.carouselContainer {
+  width: 940px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 20px;
+}
+.fantasyCarouselWrapper,
+.romanceCarouselWrapper,
+.classicCarouselWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.carouselBook {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 60px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  flex: 0 0 calc((100% / 4) - 20px);
+  justify-content: center;
+}
+
+.carouselBook:hover {
+  border: 3px solid rgb(255, 84, 178);
+}
+
+.bookCover {
+  width: 160px;
+  height: 250px;
+  /* border-radius: 10px; */
+}
+
+.textTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(104, 97, 36);
+  width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  /* border-radius: 5px; */
+  padding: 1px 5px;
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+.arrowLeft {
+  position: absolute;
+  left: -40px;
+}
+.arrowRight {
+  position: absolute;
+  right: -40px;
+}
