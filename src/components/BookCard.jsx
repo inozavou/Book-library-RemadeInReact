@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useBooks } from "../contexts.jsx/BooksContext";
 import Spinner from "./Spinner";
 import { useEffect, useState } from "react";
@@ -30,10 +30,34 @@ function BookCard() {
           setIsLoading(false);
         }
       }
-      getBookDetails();
+      if (key) {
+        getBookDetails();
+      }
     },
-    [key]
+    [key, setIsLoading]
   );
+
+  // useEffect(
+  //   function () {
+  //     async function getBookDetails() {
+  //       try {
+  //         setIsLoading(true);
+  //         const response = await fetch(
+  //           `https://openlibrary.org/works/${key}.json`
+  //         );
+  //         const work = await response.json();
+  //         setBookDetails(work);
+  //       } catch (error) {
+  //         console.error("Error fetching data:", error);
+  //         return null;
+  //       } finally {
+  //         setIsLoading(false);
+  //       }
+  //     }
+  //     getBookDetails();
+  //   },
+  //   [key]
+  // );
 
   if (isLoading) return <Spinner />;
 

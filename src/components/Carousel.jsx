@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Carousel.module.css";
 
 function Carousel() {
-  const { genreInfo, setSelectedBook, isLoading } = useBooks();
+  const { genreInfo } = useBooks();
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleBooks = 4;
   const CarouselWrapper = "CarouselWrapper";

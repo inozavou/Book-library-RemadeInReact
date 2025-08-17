@@ -13,7 +13,7 @@ function Header() {
       <h1 className={styles.header}>
         BOOK{" "}
         <span>
-          <img className={styles.logoIcon} src="./logo.png" alt="logoIcon" />
+          <img className={styles.logoIcon} src="/logo.png" alt="logoIcon" />
         </span>
         TREE
       </h1>

@@ -9,11 +9,7 @@ function Footer() {
           <h2 className={styles.header}>
             BOOK
             <span>
-              <img
-                className={styles.logoIcon}
-                src="./logo.png"
-                alt="logoIcon"
-              />
+              <img className={styles.logoIcon} src="/logo.png" alt="logoIcon" />
             </span>
             TREE
           </h2>

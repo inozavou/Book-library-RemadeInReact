@@ -3,7 +3,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 const BooksContext = createContext();
 
 function BooksProvider({ children }) {
-  const genres = ["romance"];
+  const genres = ["romance", "fantasy", "classic"];
   const [isLoading, setIsLoading] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
   const [genreInfo, setGenreInfo] = useState({});
@@ -45,6 +45,7 @@ function BooksProvider({ children }) {
       }
     }
     createGenreCarousel();
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(
