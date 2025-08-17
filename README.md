@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Online Book-Library Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive online library web application built with **React** and **React Router**, allowing users to search for books, view detailed book information, and browse different categories. This project integrates with the **Open Library API** to fetch book data dynamically.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* **Homepage:** Welcome page with search functionality.
+* **Search Results:** Dynamic list of books based on user queries, complete with book covers and titles.
+* **Book Details Page:** View detailed information about each book.
+* **About & Contact Pages:** Informational pages about the app and contact information.
+* **Page Not Found:** Friendly 404 page for unmatched routes.
+* **Loading States:** Spinner displayed while fetching book data.
+* **Context API:** Centralized state management for book list and loading status.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **React** – Frontend library
+* **React Router DOM** – Client-side routing
+* **Context API** – State management for books
+* **CSS Modules** – Scoped and modular styling
+* **Open Library API** – Book data source
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Folder Structure
 
-### `npm test`
+```
+src/
+├─ components/
+│  ├─ SearchResultList.jsx
+│  ├─ Spinner.jsx
+├─ contexts.jsx/
+│  ├─ BooksContext.jsx
+├─ pages/
+│  ├─ Homepage.jsx
+│  ├─ Categories.jsx
+│  ├─ BookCardPage.jsx
+│  ├─ About.jsx
+│  ├─ ContactPage.jsx
+│  ├─ PageNotFound.jsx
+├─ App.css
+├─ App.jsx
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/yourusername/online-library.git
+cd online-library
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. **Start the development server:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app will run at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Navigate to the homepage.
+2. Use the search input to find books by title.
+3. Click on any book in the search results to view detailed information.
+4. Explore categories to browse books by collections.
+5. Visit About and Contact pages for more information.
 
-## Learn More
+## Routing Structure 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Route                    | Component    |
+| ------------------------ | ------------ |
+| `/`                      | Homepage     |
+| `/categories`            | Categories   |
+| `/categories/works/:key` | BookCardPage |
+| `/works/:key`            | BookCardPage |
+| `/about`                 | About        |
+| `/contact`               | ContactPage  |
+| `*`                      | PageNotFound |
